@@ -1,7 +1,8 @@
 # Tac4  
 
-![tac gif preview](tac4.gif)
-![tac image preview](tac4.png)
+![tac gif](tac4.gif)
+![tac gif walk](tac4_walk.gif)
+![tac image](tac4.png)
 
 requires assimp, freeimage, sdl2
 
