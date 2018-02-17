@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="..\..\..\Nathan%27s Stuff\tac4cool\tacPhysics\tacGJK.h" />
+    <ClInclude Include="..\..\..\Nathan%27s Stuff\tac4cool\tacPhysics\tacPhysics.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\Nathan%27s Stuff\tac4cool\tacPhysics\tacGJK.cpp" />
+    <ClCompile Include="..\..\..\Nathan%27s Stuff\tac4cool\tacPhysics\tacPhysics.cpp" />
+  </ItemGroup>
+</Project>

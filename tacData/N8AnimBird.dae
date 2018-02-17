@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 2.68.0 r58537</authoring_tool>
+    </contributor>
+    <created>2015-09-22T14:51:56</created>
+    <modified>2015-09-22T14:51:56</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_images/>
+  <library_geometries>
+    <geometry id="Shapezzz-mesh" name="Shapezzz">
+      <mesh>
+        <source id="Shapezzz-mesh-positions">
+          <float_array id="Shapezzz-mesh-positions-array" count="18">2.219435 -3.217948 -0.2257508 2.219435 -0.2179484 0.7742492 2.219435 -0.2179484 -1.276154 2.219435 2.782052 -0.2257508 2.219435 2.782052 1.774249 2.219435 2.782052 -2.225751</float_array>
+          <technique_common>
+            <accessor source="#Shapezzz-mesh-positions-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Shapezzz-mesh-normals">
+          <float_array id="Shapezzz-mesh-normals-array" count="24">1 0 0 -1 0 0 1 0 0 1 0 0 -1 0 0 1 0 0 1 0 0 -1 0 0</float_array>
+          <technique_common>
+            <accessor source="#Shapezzz-mesh-normals-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Shapezzz-mesh-vertices">
+          <input semantic="POSITION" source="#Shapezzz-mesh-positions"/>
+        </vertices>
+        <polylist count="8">
+          <input semantic="VERTEX" source="#Shapezzz-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Shapezzz-mesh-normals" offset="1"/>
+          <vcount>3 3 3 3 3 3 3 3 </vcount>
+          <p>2 0 3 0 0 0 1 1 3 1 0 1 2 2 1 2 0 2 3 3 1 3 2 3 1 4 4 4 3 4 2 5 5 5 3 5 3 6 1 6 0 6 3 7 2 7 0 7</p>
+        </polylist>
+      </mesh>
+      <extra><technique profile="MAYA"><double_sided>1</double_sided></technique></extra>
+    </geometry>
+  </library_geometries>
+  <library_controllers>
+    <controller id="Armature_N8AnimShape-skin" name="Armature">
+      <skin source="#Shapezzz-mesh">
+        <bind_shape_matrix>1 3.72529e-9 -1.61817e-8 -2.219435 0 0.9999999 3.72529e-9 0.2179485 -1.61817e-8 0 0.9999999 0.2257508 0 0 0 1</bind_shape_matrix>
+        <source id="Armature_N8AnimShape-skin-joints">
+          <Name_array id="Armature_N8AnimShape-skin-joints-array" count="4">Body BotWing TopWing Tail</Name_array>
+          <technique_common>
+            <accessor source="#Armature_N8AnimShape-skin-joints-array" count="4" stride="1">
+              <param name="JOINT" type="name"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Armature_N8AnimShape-skin-bind_poses">
+          <float_array id="Armature_N8AnimShape-skin-bind_poses-array" count="64">-0.3096472 0.007898628 0.1231557 0 0.01378816 0.3327813 0.0133242 0 -0.122636 0.01747167 -0.3094612 0 0 0 0 1 -0.3113544 0.1190217 0.001825332 -0.3180558 -0.005628168 -0.009613811 -0.3331471 0.06944239 -0.1189026 -0.3112113 0.01098954 0.9455254 0 0 0 1 -0.3316716 0.003457188 -0.03306168 0.03476864 -0.03317064 -0.01271498 0.331435 0.002453088 0.002176344 0.3330727 0.0129956 -0.9993922 0 0 0 1 -0.3319032 -0.002209901 -0.03076392 0 0.003123581 -0.3331755 -0.009765684 0 -0.03068464 -0.01001209 0.331767 0 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#Armature_N8AnimShape-skin-bind_poses-array" count="4" stride="16">
+              <param name="TRANSFORM" type="float4x4"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Armature_N8AnimShape-skin-weights">
+          <float_array id="Armature_N8AnimShape-skin-weights-array" count="16">1 0.02383387 0.01953631 0.9566298 0.03710377 0.01062381 0.9522724 0.8191621 0.05954641 0.07802891 0.04326248 0.06890714 0.9310928 0.2115778 0.7148787 0.07354336</float_array>
+          <technique_common>
+            <accessor source="#Armature_N8AnimShape-skin-weights-array" count="16" stride="1">
+              <param name="WEIGHT" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <joints>
+          <input semantic="JOINT" source="#Armature_N8AnimShape-skin-joints"/>
+          <input semantic="INV_BIND_MATRIX" source="#Armature_N8AnimShape-skin-bind_poses"/>
+        </joints>
+        <vertex_weights count="6">
+          <input semantic="JOINT" source="#Armature_N8AnimShape-skin-joints" offset="0"/>
+          <input semantic="WEIGHT" source="#Armature_N8AnimShape-skin-weights" offset="1"/>
+          <vcount>1 3 3 4 2 3 </vcount>
+          <v>3 0 0 1 2 2 3 3 0 4 1 5 3 6 0 7 1 8 2 9 3 10 0 11 2 12 0 13 1 14 3 15</v>
+        </vertex_weights>
+      </skin>
+    </controller>
+  </library_controllers>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="Armature" name="Armature" type="NODE">
+        <matrix sid="transform">-2.786825 1.103724 0.1240937 0 0.07108792 -0.157245 2.995033 0 1.108401 2.785151 0.1199176 0 0 0 0 1</matrix>
+        <node id="Body" name="Body" sid="Body" type="JOINT">
+          <matrix sid="transform">1 0 0 0 0 7.54979e-8 -1 0 0 1 7.54979e-8 0 0 0 0 1</matrix>
+          <node id="BotWing" name="BotWing" sid="BotWing" type="JOINT">
+            <matrix sid="transform">0.8781746 -0.3542594 0.3214182 0 0.3180558 -0.06944241 -0.9455254 1 0.3572814 0.9325654 0.05169171 0 0 0 0 1</matrix>
+          </node>
+          <node id="TopWing" name="TopWing" sid="TopWing" type="JOINT">
+            <matrix sid="transform">0.887911 0.4589 0.0320167 0 -0.03476871 -0.002453133 0.9993926 1 0.4586997 -0.8884847 0.0137772 0 0 0 0 1</matrix>
+          </node>
+        </node>
+        <node id="Tail" name="Tail" sid="Tail" type="JOINT">
+          <matrix sid="transform">0.8907006 -0.043214 0.452532 0 -0.4516647 0.0286387 0.891728 0 -0.05149507 -0.9986553 0.005990271 0 0 0 0 1</matrix>
+        </node>
+      </node>
+      <node id="N8AnimShape" name="N8AnimShape" type="NODE">
+        <translate sid="location">0 0 0</translate>
+        <rotate sid="rotationZ">0 0 1 0</rotate>
+        <rotate sid="rotationY">0 1 0 0</rotate>
+        <rotate sid="rotationX">1 0 0 0</rotate>
+        <scale sid="scale">1 1 1</scale>
+        <instance_controller url="#Armature_N8AnimShape-skin">
+          <skeleton>#Body</skeleton>
+          <skeleton>#Tail</skeleton>
+        </instance_controller>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>
