@@ -6,8 +6,3 @@
 
 requires assimp, freeimage, sdl2
 
-
-
-
-
-
